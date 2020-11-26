@@ -71,7 +71,7 @@ class MyMainWindow(QMainWindow,Ui_MainWindow):
         self.status.showMessage('只存在5秒的消息', 5000)
         # 为控件添加提示信息
         self.setToolTip('你好啊')
-        self.closeButton.clicked.connect(self.close) # 关闭窗口
+        # self.closeButton.clicked.connect(self.close) # 关闭窗口
         self.timer_camera.timeout.connect(lambda: self.video_source())  # 对打开摄像头2 按钮进行连接函数
         # self.pushButton_5.setEnabled(False)
         self.pushButton_4.clicked.connect(self.face_warehouse_btn)  # 人脸入库 连接函数
@@ -348,11 +348,11 @@ class MyMainWindow(QMainWindow,Ui_MainWindow):
                     if img_num_warehouse == 4:
                         QApplication.processEvents()
                         self.write_compare_img(compare_list_1, cropped, -1)
-                        time.sleep(0.8)
+                        time.sleep(1)
                         self.write_compare_img(compare_list_2, cropped, -2)
-                        time.sleep(0.8)
+                        time.sleep(1)
                         self.write_compare_img(compare_list_3, cropped, -3)
-                        time.sleep(0.8)
+                        time.sleep(1)
                         self.write_compare_img(compare_list_4, cropped, -4)
                         img_num_compare, img_list_compare = self.len_list('face_compare/')
                         picture = QPixmap(os.path.join('face_compare/', img_list_compare[-4]))

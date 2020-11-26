@@ -69,10 +69,10 @@ class Ui_MainWindow(object):
 
         # spacerItem = QtWidgets.QSpacerItem(10, 10, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         # self.verticalLayout.addItem(spacerItem, 0, 0, 1, 1)
-        self.closeButton = QtWidgets.QPushButton(self.centralwidget)
-        self.closeButton.setMaximumSize(QtCore.QSize(30, 30))
-        self.closeButton.setObjectName("closeButton")
-        self.verticalLayout.addWidget(self.closeButton)
+        # self.closeButton = QtWidgets.QPushButton(self.centralwidget)
+        # self.closeButton.setMaximumSize(QtCore.QSize(30, 30))
+        # self.closeButton.setObjectName("closeButton")
+        # self.verticalLayout.addWidget(self.closeButton)
 
 
         self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
@@ -225,7 +225,7 @@ class Ui_MainWindow(object):
         self.label_5.setText(_translate("MainWindow", ""))
         self.label_3.setText(_translate("MainWindow", "校门关闭"))
         self.label_4.setText(_translate("MainWindow", "图标"))
-        self.closeButton.setText(_translate("MainWindow", "X"))
+        # self.closeButton.setText(_translate("MainWindow", "X"))
         # self.plainTextEdit.setPlainText(_translate("MainWindow", "其他内容"))
 
     # def center(self):  # 定义一个函数使得窗口居中显示
