@@ -78,7 +78,7 @@ class MyMainWindow(QMainWindow,Ui_MainWindow):
         self.pushButton_5.clicked.connect(self.face_recognition_btn)  # 人脸识别按钮连接函数 调用face_recogniton_btn
         # self.show()
         # self.label_4.setOpenExternalLinks(True) #　True 浏览器打开 False 调用槽函数
-        self.label_4.setText('<a href="http://www.chinauniwise.com/"><img src="img/result.png"></a>')
+        self.label_4.setText('<a href=" "><img src="img/cc.png"></a>')
 
     # def click_1(self):
     #     self.thread_1 = Thread_1()  # 创建线程
@@ -184,13 +184,13 @@ class MyMainWindow(QMainWindow,Ui_MainWindow):
 
     def open_pic(self):
         open_pixmap = QPixmap('img/1113.png')
-        open_scaredPixmap = open_pixmap.scaled(888, 300)
+        open_scaredPixmap = open_pixmap.scaled(888, 280)
         self.label_5.setPixmap(open_scaredPixmap)
         self.label_3.setText("校门打开")
 
     def closed_pic(self):
         open_pixmap = QPixmap('img/1114.png')
-        open_scaredPixmap = open_pixmap.scaled(888, 300)
+        open_scaredPixmap = open_pixmap.scaled(888, 280)
         self.label_5.setPixmap(open_scaredPixmap)
         self.label_3.setText("校门关闭")
 
@@ -239,7 +239,7 @@ class MyMainWindow(QMainWindow,Ui_MainWindow):
             while (self.cap.isOpened()):
                 ret, self.image = self.cap.read()
                 QApplication.processEvents()  #这句代码告诉QT处理来处理任何没有被处理的事件，并且将控制权返回给调用者  让代码变的没有那么卡
-                show = cv2.resize(self.image, (500, 290))
+                show = cv2.resize(self.image, (500, 285))
                 show = cv2.cvtColor(show,cv2.COLOR_BGR2RGB)  # 这里指的是显示原图
                 # opencv 读取图片的样式，不能通过Qlabel进行显示，需要转换为Qimage QImage(uchar * data, int width,
                 self.showImage = QImage(show.data, show.shape[1], show.shape[0],
@@ -375,7 +375,7 @@ class MyMainWindow(QMainWindow,Ui_MainWindow):
                         os.remove(os.path.join('face_compare/', img_list_compare[3]))
                     tmp_switch = 1
                 self.label_7.setPixmap(QPixmap.fromImage(self.showImage))
-                show_video = cv2.resize(frame, (500, 290))
+                show_video = cv2.resize(frame, (500, 285))
                 show_video = cv2.cvtColor(show_video, cv2.COLOR_BGR2RGB)  # 这里指的是显示原图
                 # opencv 读取图片的样式，不能通过Qlabel进行显示，需要转换为Qimage QImage(uchar * data, int width,
                 self.showImage = QImage(show_video.data, show_video.shape[1], show_video.shape[0], QImage.Format_RGB888)
